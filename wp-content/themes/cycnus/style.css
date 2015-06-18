@@ -1,0 +1,504 @@
+/*!
+ * Theme Name: Cycnus
+ * Theme URI: http://jayj.dk/themes/cycnus
+ * Description: A light child theme for the <a href="http://wordpress.org/themes/socially-awkward">Socially Awkward</a> media theme. Besides the light colours, it adds support for a custom background.
+ * Version: 1.1.1
+ * Author: Jesper Johansen
+ * Author URI: http://jayj.dk
+ * Template: socially-awkward
+ * Tags: light, white, blue, one-column, featured-images, microformats, post-formats, sticky-post, threaded-comments, custom-background, custom-menu
+ * License: GNU General Public License v2.0
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ */
+/**
+ * Libre Baskerville font
+ * --------------------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6,
+.comment-author,
+.format-chat cite,
+dt {
+  font-family: 'Lora', 'Libre Baskerville', 'Baskerville', serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/**
+ * Defaults
+ * --------------------------------------------------------------------------- */
+/* === Body === */
+body {
+  padding-top: 0;
+  border-top-color: rgba(0, 0, 0, 0.3);
+  border-bottom-color: rgba(0, 0, 0, 0.4);
+  background: white;
+}
+
+.custom-background-empty,
+.custom-background-white {
+  border-top-color: #c0392b;
+  border-bottom-color: #2980b9;
+}
+
+/* === Reset opacities to 100% === */
+#respond input[type="text"],
+#respond input[type="email"],
+#respond input[type="url"],
+#respond input[type="submit"],
+#respond input[type="submit"]:focus,
+#respond input[type="submit"]:hover,
+#respond textarea,
+#main a:hover, a:hover,
+.comment-content pre, pre,
+.comment-content th,
+.comment-content td,
+th, td,
+.wp-caption-text {
+  opacity: 1;
+}
+
+/* === Links === */
+#main a {
+  color: #1c5e8a;
+  transition-duration: 180ms;
+}
+
+#main a:hover,
+a:hover {
+  color: #c0392b;
+  transition-duration: 180ms;
+}
+
+/* === Code and Preformatted text === */
+code {
+  background: none;
+  color: #009933;
+  font-size: 1.2rem;
+}
+
+pre,
+.comment-content pre {
+  border: none;
+  border-radius: 5px;
+  background: #202020;
+  color: white;
+}
+
+/* === Tables === */
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+caption {
+  color: #656565;
+}
+
+th,
+.comment-content th {
+  border: 1px solid #dddddd;
+  background: white;
+}
+thead th, thead
+.comment-content th {
+  border: 1px solid #d5d5d5;
+  background: #fff7e9;
+}
+
+td,
+.comment-content td {
+  border: 1px solid #dddddd;
+  background: none;
+}
+
+tfoot th,
+tfoot td {
+  background: white;
+  box-shadow: inset 0 1px 1px 0 papayawhip;
+  color: #ef9400;
+  font-size: 1.1rem;
+}
+
+/* === WordPress Playlist === */
+.wp-playlist-tracks {
+  border: 1px solid #cccccc;
+  border-top-width: 0;
+}
+
+.wp-playlist-light .wp-playlist-item {
+  border-bottom: 1px solid #cccccc;
+}
+.wp-playlist-light .wp-playlist-item:hover {
+  background: #ecf0f1;
+  color: #c0392b;
+}
+.wp-playlist-light .wp-playlist-item a:hover,
+.wp-playlist-light .wp-playlist-playing {
+  color: #c0392b;
+}
+
+.wp-playlist-dark .wp-playlist-item, #main .wp-playlist-dark .wp-playlist-item a {
+  color: #cccccc;
+}
+.wp-playlist-dark .wp-playlist-item:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+.wp-playlist-dark .wp-playlist-playing, #main .wp-playlist-dark .wp-playlist-playing a {
+  color: #fff;
+}
+
+/**
+ * Images
+ * --------------------------------------------------------------------------- */
+img {
+  background: #f2f2f2;
+}
+
+/* === Captions === */
+.wp-caption {
+  padding: 10px;
+  background: #f2f2f2;
+}
+.wp-caption img {
+  padding: 0;
+}
+
+.wp-caption-text {
+  position: static;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  max-width: 100%;
+  background: none;
+  color: #202020;
+  font-size: 1rem;
+}
+
+/**
+ * Layout
+ * --------------------------------------------------------------------------- */
+#container {
+  margin: 0 auto;
+  padding-top: 40px;
+  max-width: 960px;
+  background: white;
+}
+
+/**
+ * Header
+ * --------------------------------------------------------------------------- */
+#site-description {
+  margin-top: 0.75rem;
+  color: #858585;
+}
+
+/**
+ * Main
+ * --------------------------------------------------------------------------- */
+.entry,
+.attachment-meta,
+#comments-template {
+  border-top: 5px solid #202020;
+  background: white;
+  color: #202020;
+  border-bottom: 0;
+  margin-bottom: 0;
+}
+.entry:last-of-type,
+.attachment-meta:last-of-type,
+#comments-template:last-of-type {
+  border-bottom: 5px solid #c0392b;
+  margin-bottom: 50px;
+}
+
+.singular .entry + #comments-template,
+.singular-attachment .entry + .attachment-meta {
+  border-top: 0;
+  margin-top: -50px;
+}
+
+.loop-meta {
+  background: #ecf0f1;
+  color: #202020;
+}
+
+/**
+ * Content
+ * --------------------------------------------------------------------------- */
+/* ====== Posts ====== */
+.entry > .wp-caption,
+.entry > img,
+.entry > a img {
+  margin-top: -10px;
+}
+
+.sticky {
+  background: #ecf0f1;
+}
+.sticky::before {
+  color: #cfd9db;
+  opacity: 1;
+}
+
+/* Make the caption full width */
+.entry > .wp-caption {
+  max-width: 100% !important;
+}
+.entry > .wp-caption .wp-caption-text {
+  text-align: center;
+}
+
+/* === Post Meta === */
+.entry-byline,
+.entry-meta {
+  color: #656565;
+}
+
+/* === Status updates === */
+.format-status .avatar {
+  box-shadow: 0 0 0 10px #f2f2f2;
+}
+
+/* === Chats === */
+.format-chat .chat-speaker-2 .chat-author,
+.format-chat .chat-speaker-12 .chat-author {
+  color: #e74c3c;
+}
+
+.format-chat .chat-speaker-3 .chat-author,
+.format-chat .chat-speaker-13 .chat-author {
+  color: #f1c40f;
+}
+
+/* === Portfolio === */
+.portfolio_item > .wp-caption,
+.portfolio_item > img,
+.portfolio_item > a img {
+  margin-top: -10px;
+}
+.archive-portfolio_item .portfolio_item:first-of-type {
+  border-top: 0;
+  padding-top: 0;
+}
+
+/* === Post-related icons === */
+.entry-byline .entry-permalink::before,
+.entry-byline .category::before,
+.entry-byline .post_tag::before,
+.entry-byline .portfolio::before,
+.entry-byline .entry-author a::before,
+.entry-footer .entry-permalink::before,
+.entry-footer .category::before,
+.entry-footer .post_tag::before,
+.entry-footer .portfolio::before,
+.entry-footer .entry-author a::before {
+  color: #858585;
+}
+
+.portfolio-item-link::before,
+a.comments-link::before,
+.comment-meta .comment-permalink::before,
+.post-edit-link::before,
+.comment-edit-link::before,
+.entry-published::before,
+.comment-published::before,
+.post-format-link::before,
+.image-sizes::before {
+  color: #858585;
+}
+
+/* ====== Formats Menu ====== */
+.page-template-formats .entry {
+  padding-top: 50px;
+  border-top: 5px solid #202020;
+  border-bottom: 5px solid #c0392b;
+  background: #ecf0f1;
+}
+.page-template-formats .entry li a {
+  margin-bottom: 75px;
+}
+.page-template-formats .entry li a::before {
+  transition-duration: 200ms;
+}
+.page-template-formats .entry li a::after {
+  content: attr(title);
+  position: absolute;
+  bottom: -37px;
+  left: 0;
+  z-index: 999;
+  width: 120px;
+  color: #4b4b4b;
+  white-space: nowrap;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.page-template-formats .entry li a:hover::after {
+  color: #7e7e7e;
+}
+
+#menu-formats li a:hover::before {
+  opacity: 0.7;
+  transition-duration: 300ms;
+}
+
+/* ====== Attachment Meta ====== */
+/* Bugfix: Prevent two line image meta (mostly long camera names). */
+.image-info .data {
+  overflow: hidden;
+  max-width: 60%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.image-info .prep {
+  max-width: 40%;
+}
+
+/* ====== Audio/Video shortcode toggle ====== */
+.media-shortcode-extend .audio-info,
+.media-shortcode-extend .video-info {
+  background: #202020;
+  color: #cccccc;
+}
+#main .media-shortcode-extend .audio-info a, #main
+.media-shortcode-extend .video-info a {
+  color: #257bb4;
+}
+#main .media-shortcode-extend .audio-info a:hover, #main
+.media-shortcode-extend .video-info a:hover {
+  color: #d24637;
+}
+
+#main .media-info-toggle {
+  background: #202020;
+  color: #fff;
+}
+#main .media-info-toggle:hover {
+  background: #202020;
+  color: #cccccc;
+}
+
+/* ====== Pagination ====== */
+#main .page-links a,
+#main .loop-nav a,
+#main .comments-nav a,
+#comments-template .comment-reply-link,
+#menu-portfolio li a {
+  background: #202020;
+  color: #fff;
+}
+#main .page-links a:hover,
+#main .loop-nav a:hover,
+#main .comments-nav a:hover,
+#comments-template .comment-reply-link:hover,
+#menu-portfolio li a:hover {
+  background: black;
+  color: #cccccc;
+}
+
+.page-links a {
+  border-radius: 50%;
+}
+
+.comments-nav .page-numbers {
+  margin: 0 10px;
+}
+
+/**
+ * Comments Template
+ * --------------------------------------------------------------------------- */
+/* === Comment text/content === */
+.comment-content {
+  background: #f9f9f9;
+}
+
+/* === Pings === */
+li.ping {
+  background: #f9f9f9;
+  opacity: 0.5;
+}
+
+/* === Avatars === */
+.comment-list .avatar {
+  box-shadow: 0 0 0 10px #f2f2f2;
+}
+
+/* === Post author comment === */
+.comment-list .bypostauthor .comment-content {
+  background: #e7f3f6;
+}
+.comment-list .bypostauthor .avatar {
+  box-shadow: 0 0 0 10px #2980b9;
+}
+
+/* === Meta === */
+.comment-meta {
+  color: #656565;
+}
+
+/* ====== RESPOND (COMMENT FORM) ====== */
+#respond input[type="text"],
+#respond input[type="email"],
+#respond input[type="url"],
+#respond textarea {
+  background-color: #f2f2f2;
+  color: #202020;
+}
+
+#respond input[type="submit"] {
+  transition-duration: 180ms;
+}
+#respond input[type="submit"]:focus, #respond input[type="submit"]:hover {
+  background: #2980b9;
+  color: #f2f2f2;
+  transition-duration: 180ms;
+}
+
+/* === Comment-related icons === */
+#respond .log-in-out::before,
+#respond label[for="author"]::before,
+#respond label[for="email"]::before,
+#respond label[for="url"]::before,
+#respond label[for="comment"]::before {
+  color: #858585;
+}
+
+/**
+ * Footer
+ * --------------------------------------------------------------------------- */
+#footer {
+  margin-top: 0;
+}
+#footer .footer-content {
+  font-size: 1rem;
+  margin-bottom: 2em;
+}
+#footer .credit {
+  font-size: inherit;
+}
+
+/**
+ * Media Queries
+ * --------------------------------------------------------------------------- */
+/* === MIN-WIDTH 800PX === */
+@media only screen and (min-width: 800px) {
+  /* ====== Primary Menu ====== */
+  #menu-primary .menu-item a {
+    color: #656565;
+  }
+  #menu-primary .sub-menu .menu-item a {
+    background: #202020;
+    color: #fff;
+    opacity: 1;
+  }
+  #menu-primary .sub-menu .menu-item a:hover {
+    background: black;
+    color: #cccccc;
+  }
+}
+/* === 800px breakpoint === */
+@media only screen and (max-width: 800px) {
+  #menu-primary .menu-item a {
+    text-transform: none;
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+}

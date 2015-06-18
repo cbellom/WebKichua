@@ -1,0 +1,595 @@
+/*!
+ * Theme Name: Cycnus
+ * Theme URI: http://jayj.dk/themes/cycnus
+ * Description: A light child theme for the <a href="http://wordpress.org/themes/socially-awkward">Socially Awkward</a> media theme. Besides the light colours, it adds support for a custom background.
+ * Version: 1.1.1
+ * Author: Jesper Johansen
+ * Author URI: http://jayj.dk
+ * Template: socially-awkward
+ * Tags: light, white, blue, one-column, featured-images, microformats, post-formats, sticky-post, threaded-comments, custom-background, custom-menu
+ * License: GNU General Public License v2.0
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ */
+
+@import 'sass/variables';
+
+@mixin button( $hover: #000 ) {
+	background: $gray-darker;
+	color: #fff;
+
+	&:hover {
+		background: $hover;
+		color: $gray-light;
+	}
+}
+
+/**
+ * Libre Baskerville font
+ * --------------------------------------------------------------------------- */
+
+h1, h2, h3, h4, h5, h6,
+.comment-author,
+.format-chat cite,
+dt {
+	font: {
+		family: 'Lora', 'Libre Baskerville', 'Baskerville', serif;
+		weight: 700;
+		style: normal;
+	}
+}
+
+/**
+ * Defaults
+ * --------------------------------------------------------------------------- */
+
+/* === Body === */
+
+body {
+	padding-top: 0;
+	border-top-color: rgba( #000, 0.3 );
+	border-bottom-color: rgba( #000, 0.4 );
+	background: $background-color;
+}
+
+// Add back the default Socially Awkward border colors
+.custom-background-empty,
+.custom-background-white {
+	border-top-color: $red;
+	border-bottom-color: $blue;
+}
+
+/* === Reset opacities to 100% === */
+
+#respond input[type="text"],
+#respond input[type="email"],
+#respond input[type="url"],
+#respond input[type="submit"],
+#respond input[type="submit"]:focus,
+#respond input[type="submit"]:hover,
+#respond textarea,
+#main a:hover, a:hover,
+.comment-content pre, pre,
+.comment-content th,
+.comment-content td,
+th, td,
+.wp-caption-text {
+	opacity: 1;
+}
+
+/* === Links === */
+
+#main a {
+	color: $link-color;
+	transition-duration: $transition-duration;
+}
+
+#main a:hover,
+a:hover {
+	color: $link-color-hover;
+	transition-duration: $transition-duration;
+}
+
+/* === Code and Preformatted text === */
+
+code {
+	background: none;
+	color: $code-color;
+	font-size: 1.2rem; // or 1 or 1.25
+}
+
+pre,
+.comment-content pre {
+	border: none;
+	border-radius: 5px;
+	background: $pre-bg-color;
+	color: $pre-text-color;
+}
+
+/* === Tables === */
+
+table {
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+
+caption {
+	color: $text-color-secondary;
+}
+
+th,
+.comment-content th {
+	border: 1px solid $table-border-color;
+	background: lighten( $table-color, 10% );
+
+	thead & {
+		border: 1px solid darken( $table-border-color, 3% );
+		background: lighten( $table-color, 4% );
+	}
+}
+
+td,
+.comment-content td {
+	border: 1px solid $table-border-color;
+	background: none;
+}
+
+tfoot th,
+tfoot td {
+	background: lighten( $table-color, 11% );
+	box-shadow: inset 0 1px 1px 0 $table-color;
+	color: darken( $table-color, 45% );
+	font-size: 1.1rem;
+}
+
+/* === WordPress Playlist === */
+
+.wp-playlist-tracks {
+	border: 1px solid $gray-light;
+	border-top-width: 0;
+}
+
+.wp-playlist-light {
+
+	.wp-playlist-item {
+		border-bottom: 1px solid $gray-light;
+
+		&:hover {
+			background: $content-highlight;
+			color: $link-color-hover;
+		}
+	}
+
+	.wp-playlist-item a:hover,
+	.wp-playlist-playing {
+		color: $link-color-hover;
+	}
+
+}
+
+.wp-playlist-dark {
+
+	.wp-playlist-item {
+		&, #main & a {
+			color: $gray-light;
+		}
+	}
+
+	.wp-playlist-item:hover {
+		background: rgba(#000, 0.3);
+	}
+
+	.wp-playlist-playing {
+		&, #main & a {
+			color: #fff;
+		}
+	}
+}
+
+/**
+ * Images
+ * --------------------------------------------------------------------------- */
+
+img {
+	background: $image-border-color;
+}
+
+/* === Captions === */
+
+.wp-caption {
+	padding: 10px;
+	background: $image-border-color;
+
+	img {
+		padding: 0;
+	}
+}
+
+.wp-caption-text {
+	position: static;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	max-width: 100%;
+	background: none;
+	color: $image-caption-text;
+	font-size: 1rem;
+}
+
+/**
+ * Layout
+ * --------------------------------------------------------------------------- */
+
+#container {
+	margin: 0 auto;
+	padding-top: 40px;
+	max-width: 960px;
+	background: $content-bg-color;
+}
+
+/**
+ * Header
+ * --------------------------------------------------------------------------- */
+
+#site-description {
+	margin-top: 0.75rem;
+	color: $icon-color-secondary;
+}
+
+/**
+ * Main
+ * --------------------------------------------------------------------------- */
+
+.entry,
+.attachment-meta,
+#comments-template {
+	border-top: $main-border-top;
+	background: $content-bg-color;
+	color: $text-color;
+
+	border-bottom: 0;
+	margin-bottom: 0;
+
+	&:last-of-type {
+		border-bottom: $main-border-bottom;
+		margin-bottom: $main-gutter-width;
+	}
+}
+
+.singular .entry + #comments-template,
+.singular-attachment .entry + .attachment-meta {
+	border-top: 0;
+	margin-top: ( -$main-gutter-width );
+}
+
+.loop-meta {
+	background: $content-highlight;
+	color: $text-color;
+}
+
+/**
+ * Content
+ * --------------------------------------------------------------------------- */
+
+/* ====== Posts ====== */
+
+.entry {
+	> .wp-caption,
+	> img,
+	> a img {
+		margin-top: -10px;
+	}
+}
+
+.sticky {
+	background: $content-highlight;
+
+	&::before {
+		color: darken( $content-highlight, 10% );
+		opacity: 1;
+	}
+}
+
+/* Make the caption full width */
+.entry > .wp-caption {
+	max-width: 100% !important;
+
+	.wp-caption-text {
+		text-align: center;
+	}
+}
+
+/* === Post Meta === */
+
+.entry-byline,
+.entry-meta {
+	color: $text-color-secondary;
+}
+
+/* === Status updates === */
+
+.format-status .avatar {
+	box-shadow: 0 0 0 10px $image-border-color;
+}
+
+/* === Chats === */
+
+.format-chat .chat-speaker-2 .chat-author,
+.format-chat .chat-speaker-12 .chat-author {
+	color: #e74c3c;
+}
+
+.format-chat .chat-speaker-3 .chat-author,
+.format-chat .chat-speaker-13 .chat-author {
+	color: #f1c40f;
+}
+
+/* === Portfolio === */
+
+.portfolio_item {
+	> .wp-caption,
+	> img,
+	> a img {
+		margin-top: -10px;
+	}
+
+	.archive-portfolio_item &:first-of-type {
+		border-top: 0;
+		padding-top: 0;
+	}
+}
+
+/* === Post-related icons === */
+
+.entry-byline,
+.entry-footer {
+	.entry-permalink,
+	.category,
+	.post_tag,
+	.portfolio,
+	.entry-author a {
+		&::before {
+			color: $icon-color-secondary;
+		}
+	}
+}
+
+.portfolio-item-link,
+a.comments-link,
+.comment-meta .comment-permalink,
+.post-edit-link,
+.comment-edit-link,
+.entry-published,
+.comment-published,
+.post-format-link,
+.image-sizes {
+	&::before {
+		color: $icon-color-secondary;
+	}
+}
+
+/* ====== Formats Menu ====== */
+
+// Only applies when the template has page content
+.page-template-formats .entry {
+	padding-top: $main-gutter-width;
+	border-top: $main-border-top;
+	border-bottom: $main-border-bottom;
+	background: $content-highlight;
+
+	li a {
+		margin-bottom: ( $main-gutter-width * 1.5 );
+
+		&::before {
+			transition-duration: ( $transition-duration + 20ms );
+		}
+
+		// Show the post format name all the time
+		&::after {
+			content: attr(title);
+			position: absolute;
+			bottom: -37px;
+			left: 0;
+			z-index: 999;
+			width: 120px;
+			color: darken( $text-color-secondary, 10% );
+			white-space: nowrap;
+			font: {
+				family: 'Open Sans', sans-serif;
+				weight: 400;
+				style: normal;
+			}
+		}
+
+		&:hover::after {
+			color: lighten( $text-color-secondary, 10% );
+		}
+	}
+}
+
+#menu-formats li a:hover::before {
+	opacity: 0.7;
+	transition-duration: ( $transition-duration + 120ms );
+}
+
+/* ====== Attachment Meta ====== */
+
+/* Bugfix: Prevent two line image meta (mostly long camera names). */
+.image-info {
+	.data {
+		overflow: hidden;
+		max-width: 60%;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+
+	.prep {
+		max-width: 40%;
+	}
+}
+
+/* ====== Audio/Video shortcode toggle ====== */
+
+.media-shortcode-extend .audio-info,
+.media-shortcode-extend .video-info {
+	background: $gray-darker;
+	color: $gray-light;
+
+	#main & a {
+		color: lighten( $link-color, 10% );
+
+		&:hover {
+			color: lighten( $link-color-hover, 6% );
+		}
+	}
+}
+
+#main .media-info-toggle {
+	@include button( $hover: $gray-darker );
+}
+
+/* ====== Pagination ====== */
+
+#main .page-links a,
+#main .loop-nav a,
+#main .comments-nav a,
+#comments-template .comment-reply-link,
+#menu-portfolio li a {
+	@include button();
+}
+
+.page-links a {
+	border-radius: 50%;
+}
+
+.comments-nav .page-numbers {
+	margin: 0 10px;
+}
+
+/**
+ * Comments Template
+ * --------------------------------------------------------------------------- */
+
+/* === Comment text/content === */
+
+.comment-content {
+	background: $comment-bg;
+}
+
+/* === Pings === */
+
+li.ping {
+	background: $comment-bg;
+	opacity: 0.5;
+}
+
+/* === Avatars === */
+
+.comment-list .avatar {
+	box-shadow: 0 0 0 10px $image-border-color;
+}
+
+/* === Post author comment === */
+
+.comment-list .bypostauthor {
+	.comment-content {
+		background: $comment-bg-author;
+	}
+
+	.avatar {
+		box-shadow: 0 0 0 10px $comment-avatar-author;
+	}
+}
+
+/* === Meta === */
+
+.comment-meta {
+	color: $text-color-secondary;
+}
+
+/* ====== RESPOND (COMMENT FORM) ====== */
+
+#respond {
+	input[type="text"],
+	input[type="email"],
+	input[type="url"],
+	textarea {
+		background-color: $input-bg;
+		color: $input-text-color;
+	}
+}
+
+#respond input[type="submit"] {
+	transition-duration: $transition-duration;
+
+	&:focus,
+	&:hover {
+		background: $input-submit-hover;
+		color: $input-submit-txt-hover;
+		transition-duration: $transition-duration;
+	}
+}
+
+/* === Comment-related icons === */
+
+#respond {
+	.log-in-out,
+	label[for="author"],
+	label[for="email"],
+	label[for="url"],
+	label[for="comment"] {
+		&::before {
+			color: $icon-color-secondary;
+		}
+	}
+}
+
+/**
+ * Footer
+ * --------------------------------------------------------------------------- */
+
+ #footer {
+ 	margin-top: 0;
+
+ 	.footer-content {
+ 		font-size: 1rem;
+ 		margin-bottom: 2em;
+ 	}
+
+ 	.credit {
+ 		font-size: inherit;
+ 	}
+ }
+
+ /**
+  * Media Queries
+  * --------------------------------------------------------------------------- */
+
+/* === MIN-WIDTH 800PX === */
+
+@media only screen and (min-width: 800px) {
+
+	/* ====== Primary Menu ====== */
+
+	#menu-primary {
+		.menu-item a {
+			color: $text-color-secondary;
+		}
+
+		.sub-menu .menu-item a {
+			@include button();
+			opacity: 1;
+		}
+	}
+
+}
+
+/* === 800px breakpoint === */
+
+@media only screen and (max-width: 800px) {
+
+	#menu-primary .menu-item a {
+		text-transform: none;
+		font-size: 1rem;
+		line-height: 1.8;
+	}
+
+}
