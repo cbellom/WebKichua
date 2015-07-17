@@ -300,6 +300,10 @@ h6 {
 .red-btn {
 	background: #e96656;
 }
+.purple-btn {
+	background: #4a095c;
+	color: #e5c507;
+}
 .green-btn {
 	background: #20AA73;
 }
@@ -588,7 +592,7 @@ input[type="url"],
 input[type="password"],
 input[type="search"],
 textarea {
-	color: #555;
+	color: #800080;
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	border-radius: 0;
 }
@@ -598,7 +602,7 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 input[type="search"]:focus,
 textarea:focus {
-	color: #111;
+	color: #800080;
 }
 input[type="text"],
 input[type="email"],
@@ -1344,6 +1348,19 @@ object {
 	margin-top: 15px;
 	margin-bottom: 0;
 }
+
+.section-header-contact-us h2 {
+	padding: 30px;
+	line-height: 40px;
+	position: relative;
+	display: inline-block;
+	font-size: 45px;
+	text-transform: uppercase;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	background-color: rgba(62,7,69,0.6);
+}
+
 .section-header h6 {
 	font-size: 16px;
 	margin-bottom: 0;
@@ -4565,6 +4582,11 @@ body.custom-background {
     .section-header {
         padding-bottom: 30px;
     }
+	
+	.section-header-contact-us {
+        padding-bottom: 30px;
+    }
+	
     .focus, .works, .about-us, .features, .packages, .products, .testimonial, .contact-us {
         padding-top: 60px;
         padding-bottom: 60px;

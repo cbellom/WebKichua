@@ -380,7 +380,7 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 		<section class="contact-us" id="contact">
 			<div class="container">
 				<!-- SECTION HEADER -->
-				<div class="section-header">
+				<div class="section-header-contact-us">
 					
 					<?php
 					
@@ -448,32 +448,32 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 
 						<div class="col-lg-4 col-sm-4" data-scrollreveal="enter left after 0s over 1s">
 
-							<input required="required" type="text" name="myname" placeholder="Your Name" class="form-control input-box" value="<?php if(isset($_POST['myname'])) echo esc_attr($_POST['myname']);?>">
+							<input required="required" type="text" name="myname" placeholder="nombre" class="form-control input-box" value="<?php if(isset($_POST['myname'])) echo esc_attr($_POST['myname']);?>">
 
 						</div>
 
 						<div class="col-lg-4 col-sm-4" data-scrollreveal="enter left after 0s over 1s">
 
-							<input required="required" type="email" name="myemail" placeholder="Your Email" class="form-control input-box" value="<?php if(isset($_POST['myemail'])) echo is_email($_POST['myemail']) ? $_POST['myemail'] : ""; ?>">
+							<input required="required" type="email" name="myemail" placeholder="e-mail" class="form-control input-box" value="<?php if(isset($_POST['myemail'])) echo is_email($_POST['myemail']) ? $_POST['myemail'] : ""; ?>">
 
 						</div>
 
 						<div class="col-lg-4 col-sm-4" data-scrollreveal="enter left after 0s over 1s">
 
-							<input required="required" type="text" name="mysubject" placeholder="Subject" class="form-control input-box" value="<?php if(isset($_POST['mysubject'])) echo esc_attr($_POST['mysubject']);?>">
+							<input required="required" type="text" name="mysubject" placeholder="asunto" class="form-control input-box" value="<?php if(isset($_POST['mysubject'])) echo esc_attr($_POST['mysubject']);?>">
 
 						</div>
 
 						<div class="col-lg-12 col-sm-12" data-scrollreveal="enter right after 0s over 1s">
 
-							<textarea name="mymessage" class="form-control textarea-box" placeholder="Your Message"><?php if(isset($_POST['mymessage'])) { echo esc_html($_POST['mymessage']); } ?></textarea>
+							<textarea name="mymessage" class="form-control textarea-box" placeholder="mensaje"><?php if(isset($_POST['mymessage'])) { echo esc_html($_POST['mymessage']); } ?></textarea>
 
 						</div>
 	
 						<?php
 							$zerif_contactus_button_label = get_theme_mod('zerif_contactus_button_label','Send Message');
 							if( !empty($zerif_contactus_button_label) ):
-								echo '<button class="btn btn-primary custom-button red-btn" type="submit" data-scrollreveal="enter left after 0s over 1s">'.$zerif_contactus_button_label.'</button>';
+								echo '<button class="btn btn-primary custom-button purple-btn" type="submit" data-scrollreveal="enter left after 0s over 1s">'.$zerif_contactus_button_label.'</button>';
 							endif;
 						?>
 						
