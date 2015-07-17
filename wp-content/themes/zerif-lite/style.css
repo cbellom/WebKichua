@@ -440,7 +440,7 @@ thead th{
 	color: #f7d861;
 }
 .dark-text {
-	color: #404040;
+	color: #800080;
 }
 .white-text {
 	color: #FFFFFF;
@@ -1449,7 +1449,7 @@ object {
 	margin-right: 0 !important;
 }
 .navbar-inverse .navbar-nav>li>a {
-	color: #404040;
+	color: #800080;
 	padding: 0;
 	line-height: 35px;
 }
@@ -1489,7 +1489,7 @@ object {
 	padding:10px;
 }
 .navbar-inverse .navbar-nav ul.sub-menu li a {
-	color:#404040;
+	color:#800080;
 }
 .navbar-inverse .navbar-nav ul.sub-menu li:hover > a {
 	color:#e96656;
@@ -1631,6 +1631,7 @@ ul.nav > li.current_page_item.current > a:before {
 	text-transform: uppercase;
 	font-size: 55px;
 	float:none;
+	background-color: rgba(62,7,69,0.6);
 }
 /* Short Messages */
 .bottom-message-section {
@@ -1742,7 +1743,7 @@ ul.nav > li.current_page_item.current > a:before {
 .focus {
 	padding-bottom: 100px;
 	overflow: hidden;
-	background: #FFFFFF;
+	background: #e6e7e8;
 
 }
 .focus .row {
@@ -1762,7 +1763,6 @@ ul.nav > li.current_page_item.current > a:before {
 	height: 145px;
 	margin: auto;
 	border-radius: 50%;
-	border: 10px solid #ececec;
 	margin-bottom: 20px;
 	position: relative;
 	-webkit-transition: all 0.2s ease-in-out;
@@ -1800,7 +1800,7 @@ ul.nav > li.current_page_item.current > a:before {
 }
 .focus-box h5 {
 	margin-bottom: 15px;
-	color: #404040;
+	color: #800080;
 	position: relative;
 	display: inline-block;
 	text-transform: uppercase;
@@ -2041,7 +2041,7 @@ width: -webkit-calc(100% / 4);
  **   Section: Abot us;              -----
 -----------------------------------------*/
 .about-us {
-	background: #272727;
+	background: #e5c507;
 	color: #FFF;
 	padding-bottom: 100px;
 }
@@ -2055,6 +2055,7 @@ width: -webkit-calc(100% / 4);
 	font-size: 60px;
 	line-height: normal;
 	margin-top: -15px;
+	color: #800080;
 }
 .about-us .section-header h6 {
 	color: #FFF;
@@ -2101,6 +2102,7 @@ width: -webkit-calc(100% / 4);
 	float: none;
 	margin-top: 0;
 	margin-bottom: 0;
+	color: #800080;
 }
 .skills .skill p {
 	line-height: 20px;
@@ -2220,7 +2222,7 @@ width: -webkit-calc(100% / 4);
 .our-team {
 	padding-bottom: 66px;
 	padding-top: 100px;
-	background: #FFFFFF;
+	background: #e6e7e8;
 }
 .team-member {
 	border-radius: 4px;
@@ -2284,13 +2286,14 @@ width: -webkit-calc(100% / 4);
 }
 .team-member h5 {
 	text-transform: uppercase;
-	color: #404040;
+	color: #800080;
 	font-weight: 700;
 	position: relative;
 	margin-top: 15px;
 }
 .team-member .position {
 	font-size: 13px;
+	color: #800080;
 }
 .team-member .social-icons {
 	margin-bottom: 25px;
