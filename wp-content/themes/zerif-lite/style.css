@@ -1402,7 +1402,6 @@ object {
 	box-shadow: 0px 5px 11px 0px rgba(50, 50, 50, 0.08);
 }
 .header-content-wrap {
-	background: rgba(0, 0, 0, 0.5);
 	position: relative;
 	-webkit-box-shadow: 0px 5px 11px 0px rgba(50, 50, 50, 0.08);
 	box-shadow: 0px 5px 11px 0px rgba(50, 50, 50, 0.08);
@@ -1649,6 +1648,8 @@ ul.nav > li.current_page_item.current > a:before {
 	font-size: 55px;
 	float:none;
 	background-color: rgba(62,7,69,0.6);
+	padding-bottom: 20px;
+	padding-top: 20px;
 }
 /* Short Messages */
 .bottom-message-section {
@@ -2753,7 +2754,6 @@ width: -webkit-calc(100% / 4);
  **   Contact us             -----
 -----------------------------------------*/
 .contact-us {
-	background: rgba(0, 0, 0, 0.5);
 	padding-bottom: 95px;
 }
 .contact-us .section-header h6 {
