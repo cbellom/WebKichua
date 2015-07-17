@@ -13,7 +13,7 @@
 			$zerif_aboutus_title = get_theme_mod('zerif_aboutus_title',__('About','zerif-lite'));
 			
 			if( !empty($zerif_aboutus_title) ):
-				echo '<h2 class="white-text">'.__($zerif_aboutus_title,'zerif-lite').'</h2>';
+				echo '<h2 class="dark-text">'.__($zerif_aboutus_title,'zerif-lite').'</h2>';
 			endif;
 			?>
 
