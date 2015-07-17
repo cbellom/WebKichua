@@ -322,6 +322,10 @@ h6 {
 	color: #FFF;
 	background: #1288b9;
 }
+.purple-btn:hover {
+	color: #4a095c;
+	background: #e5c507;
+}
 .red-btn:hover {
 	color: #FFF;
 	background: #cb4332;
