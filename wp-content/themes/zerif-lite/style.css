@@ -31,7 +31,7 @@ dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td {
 	border: 0;
-	font-family: inherit;
+	font-family: AncizarSans;
 	font-size: 16px;
 	font-style: inherit;
 	font-weight: inherit;
@@ -157,13 +157,18 @@ p {
 /*--------------------------------------------------------------
 2.0 Typography
 --------------------------------------------------------------*/
+@font-face {
+	font-family: AncizarSans;  
+	src: url(localhost/wordpress/wp-content/themes/zerif-lite/fonts/AncizarSans/Ancizar-Sans-Black-Italic.otf); 
+	font-weight: normal;  
+}
 body,
 button,
 input,
 select,
 textarea {
 	color: #404040;
-	font-family: sans-serif;
+	font-family: AncizarSans;
 	font-size: 16px;
 	font-size: 1.6rem;
 	line-height: 1.5;
@@ -243,14 +248,17 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font: inherit;
 	vertical-align: baseline;
 	margin-bottom: 10px;
 	display: block;
 	clear: both;
+	font-family: AncizarSans;
+} 
+a, p {
+	font-family: AncizarSans;
 }
 h1,h2 {
-	font-family: 'Montserrat', 'sans-serif';
+	font-family: 'AncizarSans', 'AncizarSans';
 	font-weight: 700;
 	line-height: 35px;
 }
@@ -2091,6 +2099,7 @@ width: -webkit-calc(100% / 4);
 	line-height: normal;
 	margin-top: -15px;
 	color: #800080;
+	font-family: AncizarSans;
 }
 .about-us .section-header h6 {
 	color: #800080;
