@@ -257,6 +257,7 @@ h1,h2 {
 h1,
 h1 span {
 	font-size: 30px;
+	color: #800080;
 }
 h2 {
 	font-size: 26px;
@@ -675,15 +676,27 @@ input:focus {
  **   5.1 Links                 -----
 -----------------------------------------*/
 a {
-	color: #e96656;
+	color: #800080;
 }
 a:visited {
-	color: #e96656;
+	color: #800080;
 }
 a:hover,
 a:focus,
 a:active {
-	color: #cb4332;
+	color: #800080;
+}
+
+.a-dic {
+	color: white;
+}
+.a-dic:visited {
+	color: white;
+}
+.a-dic:hover,
+.a-dic:focus,
+.a-dic:active {
+	color: white;
 }
 /*---------------------------------------
  **   5.2 Menus                  -----
@@ -1041,7 +1054,7 @@ a:active {
 	margin: auto;
 	z-index: 1;
 	content: "";
-	width: 10%;
+	width: 0%;
 	height: 2px;
 	background: #e96656;
 	bottom: -9px;
@@ -1406,6 +1419,7 @@ object {
 	box-shadow: 0px 5px 11px 0px rgba(50, 50, 50, 0.08);
 }
 .header-content-wrap {
+	background: rgba(0, 0, 0, 0.5);
 	position: relative;
 	-webkit-box-shadow: 0px 5px 11px 0px rgba(50, 50, 50, 0.08);
 	box-shadow: 0px 5px 11px 0px rgba(50, 50, 50, 0.08);
@@ -3009,9 +3023,10 @@ article .posted-on a:hover{
 	min-height: 1px;
 }
 .entry-title{
-	font-size: 20px;
+	font-size: 30px;
 	margin-top: 0;
 	padding-top: 0;
+	color: #800080;
 }
 .listpost-content-wrap .entry-content {
 	margin-top: 1em;
