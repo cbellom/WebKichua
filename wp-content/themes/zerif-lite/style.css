@@ -302,8 +302,8 @@ h6 {
 	background: #e5c507;
 }
 .purple-btn {
-	background: #4a095c;
-	color: #e5c507;
+	background: #e5c507;
+	color: #4a095c;
 }
 .green-btn {
 	background: #20AA73;
@@ -324,8 +324,8 @@ h6 {
 	background: #1288b9;
 }
 .purple-btn:hover {
-	color: #4a095c;
-	background: #e5c507;
+	color: #e5c507;
+	background: #4a095c;
 }
 .red-btn:hover {
 	color: #FFF;
@@ -1419,7 +1419,6 @@ object {
 	box-shadow: 0px 5px 11px 0px rgba(50, 50, 50, 0.08);
 }
 .header-content-wrap {
-	background: rgba(0, 0, 0, 0.5);
 	position: relative;
 	-webkit-box-shadow: 0px 5px 11px 0px rgba(50, 50, 50, 0.08);
 	box-shadow: 0px 5px 11px 0px rgba(50, 50, 50, 0.08);
