@@ -146,21 +146,6 @@
 
 						$zerif_aboutus_feature1_nr = get_theme_mod('zerif_aboutus_feature1_nr','80');
 
-
-						if( !empty($zerif_aboutus_feature1_nr) ):
-
-
-							echo '<div class="skill-count">';
-
-
-								echo '<input type="text" value="'.$zerif_aboutus_feature1_nr.'" data-thickness=".2" class="skill1">';
-
-
-							echo '</div>';
-
-
-						endif;
-
 						if( !empty($zerif_aboutus_feature1_title) ):
 							echo '<h6>'.__($zerif_aboutus_feature1_title,'zerif-lite').'</h6>';
 						endif;
@@ -189,21 +174,6 @@
 
 
 						$zerif_aboutus_feature2_nr = get_theme_mod('zerif_aboutus_feature2_nr','91');
-
-
-						if( !empty($zerif_aboutus_feature2_nr) ):
-
-
-							echo '<div class="skill-count">';
-
-
-								echo '<input type="text" value="'.$zerif_aboutus_feature2_nr.'" data-thickness=".2" class="skill2">';
-
-
-							echo '</div>';
-
-
-						endif;
 
 						$zerif_aboutus_feature2_title = get_theme_mod('zerif_aboutus_feature2_title',__('YOUR SKILL #2','zerif-lite'));
 						$zerif_aboutus_feature2_text = get_theme_mod('zerif_aboutus_feature2_text');
@@ -236,21 +206,6 @@
 
 						$zerif_aboutus_feature3_nr = get_theme_mod('zerif_aboutus_feature3_nr','88');
 
-
-						if( !empty($zerif_aboutus_feature3_nr) ):
-
-
-							echo '<div class="skill-count">';
-
-
-								echo '<input type="text" value="'.$zerif_aboutus_feature3_nr.'" data-thickness=".2" class="skill3">';
-
-
-							echo '</div>';
-
-
-						endif;
-
 						$zerif_aboutus_feature3_title = get_theme_mod('zerif_aboutus_feature3_title',__('YOUR SKILL #3','zerif-lite'));
 						$zerif_aboutus_feature3_text = get_theme_mod('zerif_aboutus_feature3_text');
 
@@ -278,22 +233,7 @@
 					<?php
 
 
-						$zerif_aboutus_feature4_nr = get_theme_mod('zerif_aboutus_feature4_nr','95');
-
-
-						if( !empty($zerif_aboutus_feature4_nr) ):
-
-
-							echo '<div class="skill-count">';
-
-
-								echo '<input type="text" value="'.$zerif_aboutus_feature4_nr.'" data-thickness=".2" class="skill4">';
-
-
-							echo '</div>';
-
-
-						endif;
+						$zerif_aboutus_feature4_nr = get_theme_mod('zerif_aboutus_feature4_nr','95');			
 
 						$zerif_aboutus_feature4_title = get_theme_mod('zerif_aboutus_feature4_title',__('YOUR SKILL #4','zerif-lite'));
 						$zerif_aboutus_feature4_text = get_theme_mod('zerif_aboutus_feature4_text');

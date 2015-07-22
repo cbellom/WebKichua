@@ -31,7 +31,7 @@ dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td {
 	border: 0;
-	font-family: AncizarSans;
+	font-family: Ancizar-Sans-Regular;
 	font-size: 16px;
 	font-style: inherit;
 	font-weight: inherit;
@@ -158,8 +158,18 @@ p {
 2.0 Typography
 --------------------------------------------------------------*/
 @font-face {
-	font-family: AncizarSans;  
-	src: url(localhost/wordpress/wp-content/themes/zerif-lite/fonts/AncizarSans/Ancizar-Sans-Black-Italic.otf); 
+	font-family: Ancizar-Sans-Bold;  
+	src: url(http://localhost/wordpress/wp-content/themes/zerif-lite/fonts/AncizarSans/Ancizar-Sans-Bold.otf); 
+	font-weight: normal;  
+}
+@font-face {
+	font-family: Ancizar-Sans-Regular;  
+	src: url(http://localhost/wordpress/wp-content/themes/zerif-lite/fonts/AncizarSans/Ancizar-Sans-Regular.otf); 
+	font-weight: normal;  
+}
+@font-face {
+	font-family: Ancizar-Sans-Light;  
+	src: url(http://localhost/wordpress/wp-content/themes/zerif-lite/fonts/AncizarSans/Ancizar-Sans-Light.otf); 
 	font-weight: normal;  
 }
 body,
@@ -168,7 +178,7 @@ input,
 select,
 textarea {
 	color: #404040;
-	font-family: AncizarSans;
+	font-family: Ancizar-Sans-Regular;
 	font-size: 16px;
 	font-size: 1.6rem;
 	line-height: 1.5;
@@ -252,13 +262,13 @@ h1, h2, h3, h4, h5, h6 {
 	margin-bottom: 10px;
 	display: block;
 	clear: both;
-	font-family: AncizarSans;
+	font-family: Ancizar-Sans-Bold;
 } 
-a, p {
-	font-family: AncizarSans;
+a, p, h6 {
+	font-family: Ancizar-Sans-Regular;
 }
 h1,h2 {
-	font-family: 'AncizarSans', 'AncizarSans';
+	font-family: Ancizar-Sans-Bold;
 	font-weight: 700;
 	line-height: 35px;
 }
@@ -2099,7 +2109,7 @@ width: -webkit-calc(100% / 4);
 	line-height: normal;
 	margin-top: -15px;
 	color: #800080;
-	font-family: AncizarSans;
+	font-family: Ancizar-Sans-Light;
 }
 .about-us .section-header h6 {
 	color: #800080;
