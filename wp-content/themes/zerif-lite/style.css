@@ -159,17 +159,17 @@ p {
 --------------------------------------------------------------*/
 @font-face {
 	font-family: Ancizar-Sans-Bold;  
-	src: url(http://localhost/wordpress/wp-content/themes/zerif-lite/fonts/AncizarSans/Ancizar-Sans-Bold.otf); 
+	src: url(http://vivelabbogota.com/lengua_kichwa/wp-content/themes/zerif-lite/fonts/AncizarSans/Ancizar-Sans-Bold.otf); 
 	font-weight: normal;  
 }
 @font-face {
 	font-family: Ancizar-Sans-Regular;  
-	src: url(http://localhost/wordpress/wp-content/themes/zerif-lite/fonts/AncizarSans/Ancizar-Sans-Regular.otf); 
+	src: url(http://vivelabbogota.com/lengua_kichwa/wp-content/themes/zerif-lite/fonts/AncizarSans/Ancizar-Sans-Regular.otf); 
 	font-weight: normal;  
 }
 @font-face {
 	font-family: Ancizar-Sans-Light;  
-	src: url(http://localhost/wordpress/wp-content/themes/zerif-lite/fonts/AncizarSans/Ancizar-Sans-Light.otf); 
+	src: url(http://vivelabbogota.com/lengua_kichwa/wp-content/themes/zerif-lite/fonts/AncizarSans/Ancizar-Sans-Light.otf); 
 	font-weight: normal;  
 }
 body,
@@ -4926,4 +4926,11 @@ body.custom-background {
 
 .zerif-copyright-box {
 	width: 100%;
+}
+
+.entry-meta {
+    display: none;
+}
+.entry-footer {
+    display: none;
 }
