@@ -895,7 +895,7 @@ a:active {
 	margin-bottom: 30px;*/
 }
 .widget .widget-title {
-	color: #404040;
+	color: #800080;
 	text-transform: uppercase;
 	margin-bottom: 30px;
 	font-weight: bold;
@@ -913,7 +913,7 @@ a:active {
 	content: "";
 	width: 35%;
 	height: 2px;
-	background: #e5c507;
+	background: #8f86d1;
 	bottom: -9px;
 	left: 0;
 }
@@ -4954,11 +4954,11 @@ table {
 }	
 
 th {
-	background: url(http://jackrugile.com/images/misc/noise-diagonal.png), linear-gradient(#777, #444);
+	background: url(http://jackrugile.com/images/misc/noise-diagonal.png), linear-gradient(#4a095c, #800080);
 	border-left: 1px solid #555;
-	border-right: 1px solid #777;
-	border-top: 1px solid #555;
-	border-bottom: 1px solid #333;
+	border-right: 0px solid #777;
+	border-top: 0px solid #555;
+	border-bottom: 0px solid #333;
 	box-shadow: inset 0 1px 0 #999;
 	color: #fff;
   font-weight: bold;
@@ -4968,7 +4968,6 @@ th {
 }
 
 th:after {
-	background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,.08));
 	content: '';
 	display: block;
 	height: 25%;
@@ -5026,11 +5025,6 @@ tr:last-of-type td:first-child {
 tr:last-of-type td:last-child {
 	box-shadow: inset -1px -1px 0 #fff;
 }	
-
-tbody:hover td {
-	color: transparent;
-	text-shadow: 0 0 3px #aaa;
-}
 
 tbody:hover tr:hover td {
 	color: #444;
