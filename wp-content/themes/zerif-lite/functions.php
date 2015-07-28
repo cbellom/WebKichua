@@ -1648,3 +1648,9 @@ function remove_class_function( $classes ) {
     return $classes;
 
 }
+function set_search_filter( $query ) {
+  if ( $query->is_search && $query->is_main_query() ) {
+    $query->set( 'post__not_in', array( 73,71,104 ) ); 
+  }
+}
+add_action( 'pre_get_posts', 'set_search_filter' );
