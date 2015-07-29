@@ -139,7 +139,7 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 			if(trim($_POST['myname']) === ''):
 
 
-				$nameError = __('* Please enter your name.','zerif-lite');
+				$nameError = __('* Por favor, escriba su nombre.','zerif-lite');
 
 
 				$hasError = true;
@@ -160,7 +160,7 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 			if(trim($_POST['myemail']) === ''):
 
 
-				$emailError = __('* Please enter your email address.','zerif-lite');
+				$emailError = __('* Por favor, introduzca su dirección de correo electrónico.','zerif-lite');
 
 
 				$hasError = true;
@@ -169,7 +169,7 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 			elseif (!preg_match("/^[[:alnum:]][a-z0-9_.-]*@[a-z0-9.-]+\.[a-z]{2,4}$/i", trim($_POST['myemail']))) :
 
 
-				$emailError = __('* You entered an invalid email address.','zerif-lite');
+				$emailError = __('* Ha introducido una dirección de correo no válida.','zerif-lite');
 
 
 				$hasError = true;
@@ -190,7 +190,7 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 			if(trim($_POST['mysubject']) === ''):
 
 
-				$subjectError = __('* Please enter a subject.','zerif-lite');
+				$subjectError = __('* Por favor, introduzca un asunto.','zerif-lite');
 
 
 				$hasError = true;
@@ -211,7 +211,7 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 			if(trim($_POST['mymessage']) === ''):
 
 
-				$messageError = __('* Please enter a message.','zerif-lite');
+				$messageError = __('* Por favor, introduzca un mensaje.','zerif-lite');
 
 
 				$hasError = true;
@@ -404,11 +404,11 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 
 						if(isset($emailSent) && $emailSent == true) :
 
-							echo '<div class="notification success"><p>'.__('Thanks, your email was sent successfully!','zerif-lite').'</p></div>';
+							echo '<div class="notification success"><p>'.__('Gracias, su correo electrónico fue enviado con éxito!','zerif-lite').'</p></div>';
 
 						elseif(isset($_POST['submitted'])):
 
-							echo '<div class="notification error"><p>'.__('Sorry, an error occured.','zerif-lite').'</p></div>';
+							echo '<div class="notification error"><p>'.__('Lo sentimos, ha ocurrido un error.','zerif-lite').'</p></div>';
 
 						endif;
 
